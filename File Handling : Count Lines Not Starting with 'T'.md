@@ -13,21 +13,25 @@ To write a Python program that counts the number of lines in a text file `story.
 
 ## 🧾 Program
 ```
-def returnSum(myDict):
-    final=0
-    for i in myDict.values():
-        final+=i
-    return final
-#driver functions
+# Step 1: Open the file in read mode
+with open('story.txt', 'r') as file:
+    count = 0  # Step 2: Initialize the counter
 
-myDict = {'a': 100, 'b': 200, 'c': 300}
-print("Sum :",returnSum(myDict))
+    # Step 3: Iterate through each line
+    for line in file:
+        # Strip leading spaces and check if line does NOT start with 'T'
+        if not line.lstrip().startswith('T'):
+            count += 1  # Increment counter if condition is met
+
+# Step 4: Print the result
+print("Number of lines not starting with 'T':", count)
+
 ```
 
 ## Output
-![1747908563952889867843913870984](https://github.com/user-attachments/assets/e433700f-35f4-466a-9308-aaa23583592a)
 
+![Screenshot 2025-04-28 233714](https://github.com/user-attachments/assets/65ddcf20-e2b7-4282-8e6d-c1fe0421ed04)
 
 ## Result
-Thus,the Python program that counts the number of lines in a text file `story.txt` that do **not** start with the alphabet `'T'` is created successfully.
 
+Thus the program executed successfully.
